@@ -2,8 +2,7 @@
 **This folder contained all MVP files, where I tried to explain what I've done as base work for this project.**
 
 
-## List of files:
-- **MVP.jpg** (screenshot of code).
+## Files list:
 - **MVP.ipynb** (jupyter notebook of code).
 - **MVP.pdf** (PDF file with a summary of steps).
 
