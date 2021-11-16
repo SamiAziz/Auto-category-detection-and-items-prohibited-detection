@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sami`s Project</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+
+        <div
+          class="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-4"
+        >
+          <div class="sm:mx-auto sm:w-full sm:max-w-4xl">
+            <img
+              class="mx-auto h-16 w-auto"
+              src="https://tuwaiq.edu.sa/assets/images/tuwaiq-logo.svg"
+              alt="TUWAIQ ACADEMY"
+            />
+            <h2 class="mt-4 text-center text-3xl font-black text-indigo-800">
+              Auto Category Detection and Items Prohibited Detection
+            </h2>
+            <p class="mt-4 text-center text-xl text-gray-600">
+              This project is submitted to <br />
+              <b>TUWAIQ ACADEMY T5 Data Science BootCamp </b>
+            </p>
+          </div>
+
+          <div class="mt-12 sm:mx-auto sm:w-full sm:max-w-md">
+            <div class="bg-white py-6 px-4 shadow sm:rounded-lg sm:px-10">
+              <div class="w-full text-center text-2xl text-indigo-600">
+                <strong> Product form </strong>
+              </div>
+              <form
+                class="space-y-6 mt-6"
+                action="{{ url_for('predict')}}"
+                method="post"
+                enctype="multipart/form-data"
+              >
+                <div>
+                  <label
+                    for="product_title"
+                    class="block mb-2 text-md font-semibold text-gray-700"
+                  >
+                    Product image
+                  </label>
+                  <p style="text-align: -webkit-center">
+                    <img id="output-image" width="200" class="max-w-lg" />
+                  </p>
+                  <div class="mt-1 sm:mt-0 sm:col-span-2">
+                    <div
+                      class="
+                        max-w-lg
+                        flex
+                        justify-center
+                        px-6
+                        pt-5
+                        pb-6
+                        border-2 border-gray-300 border-dashed
+                        rounded-md
+                      "
+                    >
+                      <div class="space-y-1 text-center">
+                        <svg
+                          class="mx-auto h-12 w-12 text-gray-400"
+                          stroke="currentColor"
+                          fill="none"
+                          viewBox="0 0 48 48"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <div class="flex text-sm text-gray-600">
+                          <label
+                            for="product_image"
+                            class="
+                              w-full
+                              px-1
+                              py-2
+                              relative
+                              cursor-pointer
+                              bg-indigo-50
+                              border border-indigo-600
+                              rounded-md
+                              font-semibold
+                              text-md text-center text-indigo-600
+                              hover:text-indigo-500
+                              focus-within:outline-none
+                            "
+                          >
+                            <span>Upload a file</span>
+                            <input
+                              id="product_image"
+                              name="product_image"
+                              type="file"
+                              onchange="loadFile(event)"
+                              accept="image/gif, image/jpeg, image/png"
+                              class="sr-only"
+                            />
+                          </label>
+                        </div>
+                        <p class="text-xs text-gray-500">
+                          Upload an image
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="product_title"
+                    class="block text-md font-semibold text-gray-700"
+                  >
+                    Product Title
+                  </label>
+                  <div class="mt-1">
+                    <input
+                      id="product_title"
+                      name="product_title"
+                      type="text"
+                      autocomplete="off"
+                      required="required"
+                      class="
+                        appearance-none
+                        block
+                        w-full
+                        px-3
+                        py-2
+                        border border-gray-300
+                        rounded-md
+                        shadow-sm
+                        placeholder-gray-400
+                        focus:outline-none focus:border-indigo-500
+                        sm:text-sm
+                      "
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <button
+                    type="submit"
+                    class="
+                      w-full
+                      flex
+                      justify-center
+                      py-2
+                      px-4
+                      border border-transparent
+                      rounded-lg
+                      shadow-sm
+                      text-lg
+                      font-medium
+                      text-white
+                      bg-indigo-600
+                      hover:bg-indigo-700
+                      focus:outline-none
+                    "
+                  >
+                    Predict
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        {% if prediction_text != null %}
+        <div class="w-lg flex-col bg-green-100 px-3 py-4 text-green-600 rounded-lg">
+          <div class="ml-8">
+            Title prediction result:
+            <strong class="ml-2"> {{ prediction_text }} </strong>
+          </div>
+          <div class="ml-8">
+            Image prediction result:
+            <strong class="ml-2"> {{ prediction_image }} </strong>
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="w-full flex text-center justify-center mb-4">
+            <p class="mt-2 text-sm text-gray-500">Developed by <b>Sami Aziz</b></p>
+            <p class="mx-4 mt-2 text-sm text-gray-500">Email: <b>eng.samiaziz@gmail.com</b></p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    var loadFile = function (event) {
+      var image = document.getElementById("output-image");
+      image.src = URL.createObjectURL(event.target.files[0]);
+    };
+  </script>
+</html>
