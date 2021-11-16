@@ -49,6 +49,6 @@ The official metric was classification rate (accuracy).
 - Os
 
 ## Communication
-- Text Classification, [Text Classification](https://github.com/SamiAziz/Auto-category-detection-and-items-prohibited-detection/blob/main/assets/text_classification.png)
-- Image Classification, [Image Classification](https://github.com/SamiAziz/Auto-category-detection-and-items-prohibited-detection/blob/main/assets/image_classification.png)
-- Web homepage, [Homepage](https://github.com/SamiAziz/Auto-category-detection-and-items-prohibited-detection/blob/main/assets/homepage.png)
+- Text Classification, ![Text Classification](https://github.com/SamiAziz/Auto-category-detection-and-items-prohibited-detection/blob/main/assets/text_classification.png)
+- Image Classification, ![Image Classification](https://github.com/SamiAziz/Auto-category-detection-and-items-prohibited-detection/blob/main/assets/image_classification.png)
+- Web homepage, ![Homepage](https://github.com/SamiAziz/Auto-category-detection-and-items-prohibited-detection/blob/main/assets/homepage.png)
