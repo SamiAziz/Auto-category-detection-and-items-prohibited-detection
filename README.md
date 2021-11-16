@@ -23,13 +23,13 @@ Convolutional Neural Network (CNN), K-Nearest Neighbors (KNN).
 
 *Model Evaluation and Selection*
   
-The entire image training datasets of 60,000 and my own dataset were split into 80 train/20 validation. And for Text dataset was split into into 80 train/20 test, and all scores reported below.
+The entire image training datasets of 60,000 and my own dataset were split into 80 train/20 validation. And for Text dataset was split into 80 train/20 test, and all scores reported below.
 
 The official metric was classification rate (accuracy).
 
 **Image Classification CNN scores:** 
    -  Accuracy 96.73 %
-    I think it takes high accuracy because the images dataset that i have created is small.
+    I think it takes high accuracy because the images dataset that I have created is small.
 
 **Text Classification KNN scores:** 
    - Accuracy 87.24 %
