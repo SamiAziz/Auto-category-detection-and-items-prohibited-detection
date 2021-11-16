@@ -28,6 +28,6 @@ By default, flask will run on port 5000 so open your browser and navigate to URL
 
 You should be able to view the homepage as below :
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](https://github.com/SamiAziz/Auto-category-detection-and-items-prohibited-detection/blob/main/assets/homepage.png)
 
 ## Ok, you are ready now to use models.
