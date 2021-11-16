@@ -30,4 +30,4 @@ You should be able to view the homepage as below :
 
 ![This is an image](https://github.com/SamiAziz/Auto-category-detection-and-items-prohibited-detection/blob/main/assets/homepage.png)
 
-## Ok, you are ready now to use models.
+## Ok, you are ready now to use the models.
