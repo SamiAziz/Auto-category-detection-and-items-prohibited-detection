@@ -2,9 +2,7 @@
 Sami Aziz
 
 ## Abstract
-The goal of this project was to create models to avoid prohibited items in marketplaces by using classification models to predict the prohibited items and help marketplaces auto avoiding the violance of items. I worked with data provided by [CIFAR 10](https://www.cs.toronto.edu/~kriz/cifar.html) as first phase and then created my own dataset in local machine.
-
-, leveraging geographic and categorical feature engineering along with a random forest model to achieve promising results for this multiclass problem. After refining a model, I built an interactive dashboard to visualize and communicate my results using Tableau.      
+The goal of this project was to create models to avoid prohibited items in marketplaces by using classification models to predict the prohibited items and help marketplaces auto avoiding the violance of items. I worked with data provided by [CIFAR 10](https://www.cs.toronto.edu/~kriz/cifar.html) as first phase and then created my own dataset in local machine.    
 
 ## Design
 The data is provided by [CIFAR 10](https://www.cs.toronto.edu/~kriz/cifar.html) for first phase and i created my own dataset all these are for image model. Then created text dataset for items.
