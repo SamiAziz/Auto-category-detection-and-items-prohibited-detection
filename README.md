@@ -2,7 +2,7 @@
 Sami Aziz
 
 ## Abstract
-The goal of this project was to create models to avoid prohibited items in marketplaces by using classification models to predict the prohibited items and help marketplaces auto avoiding the violance of items. I worked with data provided by [CIFAR 10](https://www.cs.toronto.edu/~kriz/cifar.html) as first phase and then created my own dataset in local machine.    
+The goal of this project is to create models to avoid prohibited items in marketplaces by using classification models to predict the prohibited items and help marketplaces auto avoiding the violence of items. I worked with data provided by [CIFAR 10](https://www.cs.toronto.edu/~kriz/cifar.html) as the first phase and then created my own dataset in the local machine. 
 
 ## Design
 The data is provided by [CIFAR 10](https://www.cs.toronto.edu/~kriz/cifar.html) for first phase and i created my own dataset all these are for image model. Then created text dataset for items.
@@ -13,15 +13,9 @@ I implemented two seperate models,the first for  **Image classification**,and th
 As last step, i tried to deploy these model as flask API to make it live.
 
 ## Data
-Image dataset contains of 60,000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images. And Text dataset contains ~ 800 points, its just group of words as (prohibited, non-prohibited). 
+The image dataset contains 60,000 32x32 color images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images. And Text dataset contains ~ 800 points, it's just a group of words as (prohibited, non-prohibited). 
 
 ## Algorithms
-
-*Feature Engineering*
-1. Mapping latitude and longitude to 3-dimensional coordinates so nearby continuous values would also be close in reality
-2. Converting categorical features to binary dummy variables
-3. Combining particular dummies and ranges of numeric features to highlight strong signals and illogical values for waterpoint status identified during EDA
-4. Selecting subsets of the total unique values for categorical features that were converted to dummies, according to the number of samples they were associated with and their contribution to certain statuses
 
 *Models*
   
