@@ -20,9 +20,9 @@ This Folder has four major parts :
 
 
 ## Running the project
-Ensure that you are in the project home directory, then open the (CMD/Terminal) then run:
+Ensure that you are in the project home directory, then open the (CMD/Terminal) then run below command to start Flask API:
 ```
-python app.py using below command to start Flask API.
+python app.py
 ```
 By default, flask will run on port 5000 so open your browser and navigate to URL http://localhost:5000
 
